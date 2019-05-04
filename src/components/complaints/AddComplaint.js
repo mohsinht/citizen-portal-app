@@ -76,7 +76,7 @@ export class AddComplaint extends Component {
                         </div>
 
                         <div className="input-field">
-                            <button className="btn cpBtn lighten-1 z-depth-0">Submit</button>
+                            <button className="btn cpBtn lighten-1 z-depth-0">Submit Form</button>
                         </div>
                         <div className="center red-text">
                             { errMsg ? <p>{errMsg}</p> : null }
