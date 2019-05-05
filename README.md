@@ -4,7 +4,7 @@ This project was built as a semester final project for Human Computer Interactio
 
 ## Citizen Portal
 
-Citizen Portal is a complaint system where common citizens can complain about the authorities and the government officials, including ministers and beureucrats, view these complaints and try to resolve it as soon as possible.
+Citizen Portal is a complaint system where common citizens can complain about the authorities and the government officials, including ministers and beureucrats, then the concerned departments view these complaints and try to resolve them as soon as possible.
 
 ## What's Inside
 
