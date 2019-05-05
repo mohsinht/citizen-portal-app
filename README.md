@@ -1,3 +1,25 @@
+## Intro
+
+This project was built as a semester final project for Human Computer Interaction Course at FAST-NU. I spent several hours on this and studied plenty of documentation to build a seemless and efficient application. This app is solely developed by me and it mainly focuses on UI/UX standards of Norman and Schneiderman.
+
+## Citizen Portal
+
+Citizen Portal is a complaint system where common citizens can complain about the authorities and the government officials, including ministers and beureucrats, view these complaints and try to resolve it as soon as possible.
+
+## What's Inside
+
+**Firestore** - For saving complaints and profiles in the app. 
+**Firebase** - For authentication and realtime database
+**Redux** - To make the app seemless and making sure that the data is maintained througout
+**Thunk** - To connect actions and to maintain promises in the app.
+**ReactJS** - To make components and making the app modular.
+**Materialize CSS** - To make UI of the app.
+
+## Demo
+
+https://pm-citizen-portal.firebaseapp.com/
+Create an account and you can access admin using username: admin@admin.com and password: 123123
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
