@@ -8,6 +8,9 @@ import SignUp from './components/auth/SignUp';
 import AddComplaint from './components/complaints/AddComplaint'
 import ChooseDept from './components/complaints/ChooseDept';
 import viewcomplaints from './components/complaints/viewcomplaints';
+import ComplaintAdded from './components/complaints/ComplaintAdded';
+import History from './components/complaints/History';
+import AdminLogin from './components/admin/AdminLogin';
 
 function App() {
   return (
@@ -23,6 +26,9 @@ function App() {
           <Route path='/add/:slug' component = { AddComplaint } ></Route>
           <Route path='/selectdepartment' component = { ChooseDept } ></Route>
           <Route path='/view' component = { viewcomplaints } ></Route>
+          <Route path='/added' component = { ComplaintAdded } ></Route>
+          <Route path='/history' component = { History } ></Route>
+          <Route path='/loginAsAdmin' component = { AdminLogin } ></Route>
         </Switch>
 
       </div>

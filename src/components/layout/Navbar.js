@@ -6,7 +6,6 @@ import { connect } from 'react-redux'
 
 const Navbar = (props) => {
     const { auth, profile } = props;
-    console.log(auth);
     const links = auth.uid ? <SignedInLinks profile={ profile } /> : <SignedOutLinks />;
     const addButton = <li><Link to='/selectdepartment'><div className="waves-effect waves-light btn cp-button">Add A Complaint</div></Link></li>;
     const buttonsNav = auth.uid ? addButton : '';

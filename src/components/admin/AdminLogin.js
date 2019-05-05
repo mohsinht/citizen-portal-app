@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { signIn } from '../../store/actions/authActions'
 import { Redirect } from 'react-router-dom'
 
-export class SignIn extends Component {
+export class AdminLogin extends Component {
     state = {
         email : '',
         password: ''
@@ -23,13 +23,13 @@ export class SignIn extends Component {
             return <Redirect to='/' />
         }
 
-
+        
         return (
             <div>
                 <div className="container cpContent">
-                    <form onSubmit={this.handleSubmit} className="white">
+                    <form onSubmit={this.handleSubmit} className="white" style={{ width: 600, marginLeft: 180 }}>
                         <h5 className="grey-text text-darken-3">
-                            Login - Citizen Account
+                            Account Access - Admin Only
                         </h5>
                         <div className="input-field">
                             <label htmlFor="email">Email</label>
@@ -42,7 +42,7 @@ export class SignIn extends Component {
                         </div>
 
                         <div className="input-field">
-                            <button className="btn cpBtn lighten-1 z-depth-0">Login</button>
+                            <button className="btn cpBtn lighten-1 z-depth-0 cpBtn2">Access Admin</button>
                             <div className="center red-text">
                                 { authError ? <p>{authError}</p> : null }
                             </div>
@@ -55,16 +55,19 @@ export class SignIn extends Component {
 }
 
 const mapStateToProps = (state) => {
+    console.log(state);
     return{
-      authError: state.auth.authError,
-      auth: state.firebase.auth
+        authError: state.auth.authError,
+        auth: state.firebase.auth
     }
-  }
-  
-  const mapDispatchToProps = (dispatch) => {
+}
+
+const mapDispatchToProps = (dispatch) => {
     return {
       signIn: (creds) => dispatch(signIn(creds))
     }
   }
   
-  export default connect(mapStateToProps, mapDispatchToProps)(SignIn)
+
+export default connect(mapStateToProps, mapDispatchToProps)(AdminLogin);
+  

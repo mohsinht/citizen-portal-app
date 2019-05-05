@@ -141,9 +141,6 @@ input[type=password]:not(.browser-default):focus:not([readonly]) + label{
   box-shadow: 3px 5px 5px 0px #3c38381c !important;
 }
 
-.departments-list{
-}
-
 .department-icon{
   margin-top: 20px;
   color: #11CA80;
@@ -177,4 +174,57 @@ input[type=password]:not(.browser-default):focus:not([readonly]) + label{
 .view-complaints{
   width: 50%;
   margin-left: 500px;
+}
+
+.cp-theme{
+  color: #11CA80;
+}
+
+.evaluation-footer{
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.success-icon{
+  font-size: 100px;
+  margin-left: 400px;
+  margin-top: 150px;
+}
+
+.success-text{
+  margin-left: 150px;
+}
+
+.success-btn{
+  margin-left: 335px;
+  margin-top: 30px;
+}
+
+.stat-value{
+  color: white;
+  margin-left: 45px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 25px;
+}
+.stat-card {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+}
+
+.cpBtn2{
+  padding: 12px 170px 50px 182px;
+  margin-left: 50px;
+}
+
+.reason-details{
+  background-color: white !important;
+  padding: 12px !important;
+  height: 100px !important;
+  margin-top: 10px !important;
+}
+
+.reason-label{
+  margin-left: 10px !important;
 }

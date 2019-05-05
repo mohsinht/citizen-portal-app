@@ -2,8 +2,6 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux'
 import { signOut } from '../../store/actions/authActions'
-import { firestoreConnect } from 'react-redux-firebase'
-import { compose } from 'redux'
 
 const SignedInLinks = (props) => {
     return (
@@ -18,7 +16,8 @@ const SignedInLinks = (props) => {
                 <li><NavLink to='/'><i className="material-icons">insert_chart_outlined</i>Dashboard</NavLink></li>
                 <li><NavLink to='/selectdepartment'><i className="material-icons">note_add</i>Add Complaint</NavLink></li>
                 <li><NavLink to='/view'><i className="material-icons">remove_red_eye</i>View Complaints</NavLink></li>
-                <li><a onClick = {props.signOut} ><i className="material-icons">exit_to_app</i>Log Out</a></li>
+                <li><NavLink to='/history'><i className="material-icons">access_time</i>History</NavLink></li>
+                <li><a onClick = {props.signOut} style={{cursor: 'pointer'}}><i className="material-icons">exit_to_app</i>Log Out</a></li>
             </ul>
         </div>
     );
@@ -31,10 +30,9 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 const mapStateToProps = (state) => {
-    console.log(state);
     return{
 
     }
 }
 
-export default connect(null, mapDispatchToProps)(SignedInLinks);
+export default connect(mapStateToProps, mapDispatchToProps)(SignedInLinks);

@@ -1,5 +1,6 @@
 import React from 'react'
 import moment from 'moment'
+import { Link } from 'react-router-dom';
 
 const Notifications = (props) => {
   const { notifications } = props;
@@ -11,10 +12,13 @@ const Notifications = (props) => {
           <ul className="online-users">
             { notifications && notifications.map(item =>{
               return <li key={item.id}>
+              <Link to={"/complaint/"+ item.link}>
                 <span className="pink-text">{item.user} </span>
-                <span>{item.content}</span>
+                <span>{item.content} against {item.against}</span>
                 <div className="note-date grey-text">{moment(item.time.toDate()).fromNow()}</div>
+                </Link>
               </li>
+
             })}
           </ul>
         </div>

@@ -7,7 +7,10 @@ import { compose } from 'redux'
 import { Redirect } from 'react-router-dom'
 
 const viewcomplaints = (props) => {
-    const { complaints} = props;
+    const { complaints, auth } = props;
+    if(!auth.uid){
+        return <Redirect to='/signin' />
+    }
     return (
         <div className="complaint-list section view-complaints">
             { complaints && complaints.map(complaint => {
@@ -24,19 +27,22 @@ const viewcomplaints = (props) => {
 const mapStateToProps = (state) => {
     console.log(state.firebase.auth.uid)
     const id = state.firebase.auth.uid;
+    const isAdmin = state.firebase.profile.isAdmin;
     const data = state.firestore.ordered.complaints;
     var filteredData = [];
     if(data){
         Object.keys(data).forEach(function(key) {
-            if(data[key].complaintFromId == id)
+            if(isAdmin || data[key].complaintFromId === id)
                 filteredData.push(data[key]);
         });
     }
     console.log(filteredData)
     return{
         complaints: filteredData,
+        auth: state.firebase.auth
     }
 }
+
 
 
 export default compose(

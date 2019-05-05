@@ -6,6 +6,7 @@ const SignedOutLinks = () => {
         <ul>
             <li><NavLink to='/signin'>Login</NavLink></li>
             <li><NavLink to='/register'>Register</NavLink></li>
+            <li><NavLink to='/loginAsAdmin'>Admin</NavLink></li>
         </ul>
     );
 }

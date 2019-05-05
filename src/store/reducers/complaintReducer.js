@@ -8,6 +8,12 @@ const complaintReducer = (state = initState, action) => {
         case 'ADD_COMPLAINT_ERROR':
             console.log("COMPLAINT FAILED!", action.err);
             break;
+        case 'UPDATE_COMPLAINT_SUCCESS':
+            console.log("COMPLAINT STATUS CHANGE SUCCESSFUL!", action.err);
+            break;
+        case 'UPDATE_COMPLAINT_ERROR':
+            console.log("COMPLAINT STATUS FAILED!", action.err);
+            break;
         default:
             break;
     }
