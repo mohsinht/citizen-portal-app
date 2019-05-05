@@ -22,6 +22,8 @@ Citizen Portal is a complaint system where common citizens can complain about th
 
 **Materialize CSS** - To make UI of the app.
 
+**Moment** - To add date/time features in the app.
+
 ## Demo
 
 https://pm-citizen-portal.firebaseapp.com/
