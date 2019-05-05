@@ -14,6 +14,8 @@ Citizen Portal is a complaint system where common citizens can complain about th
 
 **Redux** - To make the app seemless and making sure that the data is maintained througout
 
+**Cloud Functions** - To make triggers and to add notification system in the app.
+
 **Thunk** - To connect actions and to maintain promises in the app.
 
 **ReactJS** - To make components and making the app modular.
